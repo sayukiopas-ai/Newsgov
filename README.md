@@ -50,4 +50,3 @@ Client runs on http://localhost:3000
 | State | Zustand |
 | Backend | Express.js + TypeScript |
 | Database | MongoDB + Mongoose |
-# Newsgov
