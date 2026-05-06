@@ -1,0 +1,16 @@
+{
+  "name": "newsgov-monorepo",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=client",
+    "build": "npm run build --workspace=client",
+    "start": "npm run start --workspace=client"
+  },
+  "dependencies": {
+    "next": "^14.2.23"
+  }
+}
