@@ -21,6 +21,11 @@ app.use('/api/boards', boardRoutes)
 app.use('/api/lists', listRoutes)
 app.use('/api/cards', cardRoutes)
 
+// Ping route for keeping Render server awake
+app.get('/ping', (req, res) => {
+  res.status(200).json({ status: 'ok', message: 'pong', timestamp: new Date().toISOString() })
+})
+
 mongoose
   .connect(MONGODB_URI)
   .then(() => {
