@@ -28,7 +28,7 @@ export default function KanbanColumn({ list, theme, onEditCard }: Props) {
   const style = { transform: CSS.Transform.toString(transform), transition, opacity: isDragging ? 0.5 : 1 }
 
   const handleSave = () => { updateList(list._id, title); setIsEditing(false) }
-  const handleDelete = () => { if (confirm('Delete this list and all its cards?')) deleteList(list._id) }
+  const handleDelete = () => { if (confirm('จะลบแน่นะจร๊ะ?')) deleteList(list._id) }
 
   return (
     <div ref={setNodeRef} style={style} className="bg-gray-100/90 backdrop-blur rounded-lg w-64 sm:w-72 flex-shrink-0 flex flex-col max-h-full border border-gray-200 shadow-sm">
