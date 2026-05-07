@@ -1,12 +1,14 @@
+import { Response } from 'express'
+
 type SSEClient = {
   id: string
-  res: express.Response
+  res: Response
 }
 
 class SSEManager {
   private clients: Map<string, SSEClient> = new Map()
 
-  addClient(id: string, res: express.Response) {
+  addClient(id: string, res: Response) {
     this.clients.set(id, { id, res })
   }
 

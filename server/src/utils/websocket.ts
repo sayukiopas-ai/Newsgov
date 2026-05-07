@@ -31,7 +31,7 @@ export const wsManager = new WebSocketManager()
 export function setupWebSocket(server: any) {
   const wss = new WebSocketServer({ server })
 
-  wss.on('connection', (ws) => {
+  wss.on('connection', (ws: WebSocket) => {
     console.log('🔌 WebSocket client connected')
     const clientId = Date.now().toString()
     wsManager.addClient(clientId, ws)
