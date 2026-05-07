@@ -12,7 +12,7 @@ export function useWebSocket(boardId: string | undefined) {
 
     const connect = () => {
       // Connect directly to backend WebSocket server
-      const wsUrl = `ws://localhost:5001`
+      const wsUrl = `wss://newsgov.onrender.com`
 
       wsRef.current = new WebSocket(wsUrl)
 

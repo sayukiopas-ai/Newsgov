@@ -2,7 +2,7 @@ import axios from 'axios'
 import { IBoard, ICard, IList, ILabel } from '@/types'
 
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: 'https://newsgov.onrender.com/api',
 })
 
 export const boardApi = {
