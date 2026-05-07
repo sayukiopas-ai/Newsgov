@@ -20,7 +20,7 @@ export default function TrelloLoader({ label = 'Loading', className = '' }: Prop
           />
         ))}
       </div>
-      <style jsx>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @keyframes trelloBars {
           0% {
             transform: scaleY(0.35);
@@ -44,7 +44,7 @@ export default function TrelloLoader({ label = 'Loading', className = '' }: Prop
           /* Half-cycle phase shift so bars alternate high/low */
           animation-delay: -450ms;
         }
-      `}</style>
+      `}} />
     </div>
   )
 }
